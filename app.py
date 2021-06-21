@@ -4,54 +4,34 @@ import pandas as pd
 from st_aggrid import AgGrid
 
 st.set_page_config(layout='wide')
-st.header("To Find the power of matrix\n")
-st.header("NAME-KANCHADA SANTANU SEKHAR SENAPATI\nROLL NO-118EEANTI-SHORTCIRCUIT")
+st.markdown("<h1 style='text-align: center; color: #A48153;'>Topic - To Compute The Result of a Matrix Raised to a Power</h1>", unsafe_allow_html=True)
 
+#st.markdown("<div><div style='text-align: left;'><h4>A</h4></div><div style='text-align: right;'><h4>B</h4></div></div>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>NAME-KANCHADA SANTANU SEKHAR SENAPATI      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROLL NO-118EE0577</h4>", unsafe_allow_html=True)
+# st.subheader("NAME-KANCHADA SANTANU SEKHAR SENAPATI")
+# st.subheader("ROLL NO-118EE0577")
+
+st.write('\n')
+st.write('\n')
 
 #st.write("[More information about the topic](https://docs.google.com/presentation/d/1XQXzOV60eLvaQh0XRO-vuG3Zg1sIwR3SVBhkpjCa7rs/edit?usp=sharing)")
 
-def isOrthogonal(a, n):
+import numpy as np
 
-    for cols in a.columns:
-        a[cols] = a[cols].astype(int)
-    a = a.values
-     
-    trans = [[0 for x in range(n)]
-                for y in range(n)]
-                 
-    for i in range(0, n) :
-        for j in range(0, n) :
-            trans[i][j] = a[j][i]
-             
-    prod = [[0 for x in range(n)]
-               for y in range(n)]
-                
-    for i in range(0, n) :
-        for j in range(0, n) :
-     
-            sum = 0
-            for k in range(0, n) :
-                sum = sum + (a[i][k] *
-                             a[j][k])
-     
-            prod[i][j] = sum
- 
-    for i in range(0, n) :
-        for j in range(0, n) :
- 
-            if (i != j and prod[i][j] != 0) :
-                return False, trans, prod
-            if (i == j and prod[i][j] != 1) :
-                return False, trans, prod
- 
-    return True, trans, prod
+def matrix_power(A, k):
+
+    for column in A.columns:
+        A[column] = A[column].astype(int)
+    A = A.values
+    
+    return np.linalg.matrix_power(A, k)
 
 st.write('\n\n\n\n')
-st.write('Give input dimensions of the matrix')
-n = st.number_input('dimension of matrix n*n (Orthogonal matrix needs to be a square matrix)', min_value=1, value=1)
+st.write('Give dimension of the matrix')
+n = st.number_input('n value :', min_value=1, value=1)
 
-st.write('Give input for the power of the matrix')
-k = st.number_input('Power of the matrix', min_value=1, value=1)
+st.write('Give input for the power')
+k = st.number_input('k value :', min_value=1, value=1)
 if st.checkbox('Feed Input Matrix'):
     st.text('* While entering the values press tab to go to the next input field and press enter after giving the inputs')
     st.text('* If you want to change the dimension of the input matrix then uncheck the checkbox before changing the input dimension')
@@ -59,7 +39,7 @@ if st.checkbox('Feed Input Matrix'):
     input_dataframe = pd.DataFrame(
         '',
         index=[i for i in range(n)],
-        columns=['col-'+str(i) for i in range(n)]
+        columns=['column-'+str(i+1) for i in range(n)]
     )
 
     resp = AgGrid(
@@ -75,15 +55,9 @@ if st.checkbox('Feed Input Matrix'):
     st.write('Given Input Matrix')
     st.write(resp['data'].values)
 
-    if st.button('Check Orthogonality'):
-        ans, trans, prod = isOrthogonal(resp['data'], n)
-        st.write('Transpose Matrix',np.array(trans))
-        st.write('Product Matrix',np.array(prod))
-        if not ans:
-            st.write('The Prodcuct Matrix is not an identity matrix')
-        else:
-            st.write('The Prodcut Matrix is an identity matrix')
+    if st.button('Calculate Power of the matrix'):
+        ans = matrix_power(resp['data'], k)
         
-        st.write('Orthogonality of Matrix', ans)
+        st.write('Output Matrix', ans)
 
         
