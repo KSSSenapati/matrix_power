@@ -7,7 +7,9 @@ st.set_page_config(layout='wide')
 st.markdown("<h1 style='text-align: center; color: #A48153;'>Topic - To Compute The Result of a Matrix Raised to a Power</h1>", unsafe_allow_html=True)
 
 #st.markdown("<div><div style='text-align: left;'><h4>A</h4></div><div style='text-align: right;'><h4>B</h4></div></div>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center;'>NAME-KANCHADA SANTANU SEKHAR SENAPATI      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROLL NO-118EE0577</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>NAME-KANCHADA SANTANU SEKHAR SENAPATI</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>ROLL NO - 118EE0577</h4>", unsafe_allow_html=True)
+
 # st.subheader("NAME-KANCHADA SANTANU SEKHAR SENAPATI")
 # st.subheader("ROLL NO-118EE0577")
 
