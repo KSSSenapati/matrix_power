@@ -4,7 +4,7 @@ import pandas as pd
 from st_aggrid import AgGrid
 
 st.set_page_config(layout='wide')
-st.markdown("<h1 style='text-align: center; color: #A48153;'>Topic - To Compute The Result of a Matrix Raised to a Power</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #A48153;'>Topic - To Compute The Result Of A Matrix Raised To A Power</h1>", unsafe_allow_html=True)
 
 #st.markdown("<div><div style='text-align: left;'><h4>A</h4></div><div style='text-align: right;'><h4>B</h4></div></div>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>NAME-KANCHADA SANTANU SEKHAR SENAPATI</h4>", unsafe_allow_html=True)
@@ -58,7 +58,7 @@ if st.checkbox('Feed Input Matrix'):
     st.write('Given Input Matrix')
     st.write(resp['data'].values)
 
-    if st.button('Calculate Power of the matrix'):
+    if st.button('Calculate Result'):
         ans = matrix_power(resp['data'], k)
         
         st.write('Output Matrix', ans)
