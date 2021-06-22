@@ -7,8 +7,8 @@ st.set_page_config(layout='wide')
 st.markdown("<h1 style='text-align: center; color: #A48153;'>Topic - To Compute The Result Of A Matrix Raised To A Power</h1>", unsafe_allow_html=True)
 
 #st.markdown("<div><div style='text-align: left;'><h4>A</h4></div><div style='text-align: right;'><h4>B</h4></div></div>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center;'>NAME-KANCHADA SANTANU SEKHAR SENAPATI</h4>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center;'>ROLL NO - 118EE0577</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>NAME - KANCHADA SANTANU SEKHAR SENAPATI</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>ROLL No. - 118EE0577</h4>", unsafe_allow_html=True)
 
 # st.subheader("NAME-KANCHADA SANTANU SEKHAR SENAPATI")
 # st.subheader("ROLL NO-118EE0577")
@@ -16,7 +16,7 @@ st.markdown("<h4 style='text-align: center;'>ROLL NO - 118EE0577</h4>", unsafe_a
 st.write('\n')
 st.write('\n')
 
-#st.write("[More information about the topic](https://docs.google.com/presentation/d/1XQXzOV60eLvaQh0XRO-vuG3Zg1sIwR3SVBhkpjCa7rs/edit?usp=sharing)")
+st.write("[Algorithm Explanation](https://docs.google.com/presentation/d/16EIL0_E1X-x-0WS3q0XmF3ABMOCMurZOH0upTBoqKM4/edit?usp=sharing)")
 
 import numpy as np
 
