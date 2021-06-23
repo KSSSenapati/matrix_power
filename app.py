@@ -12,7 +12,7 @@ st.markdown("<h4 style='text-align: center;'>ROLL No. - 118EE0577</h4>", unsafe_
 st.write('\n')
 st.write('\n')
 
-st.write("[Algorithm Explanation](https://docs.google.com/presentation/d/16EIL0_E1X-x-0WS3q0XmF3ABMOCMurZOH0upTBoqKM4/edit?usp=sharing)")
+st.write("[Algorithm Explanation](https://drive.google.com/file/d/1Aa3380X81jKVnD5iUn-JuPpvWvUa_jH0/view?usp=sharing)")
 
 import numpy as np
 
