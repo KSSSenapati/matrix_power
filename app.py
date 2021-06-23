@@ -6,12 +6,8 @@ from st_aggrid import AgGrid
 st.set_page_config(layout='wide')
 st.markdown("<h1 style='text-align: center; color: #A48153;'>Topic - To Compute The Result Of A Matrix Raised To A Power</h1>", unsafe_allow_html=True)
 
-#st.markdown("<div><div style='text-align: left;'><h4>A</h4></div><div style='text-align: right;'><h4>B</h4></div></div>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center;'>NAME - KANCHADA SANTANU SEKHAR SENAPATI</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>NAME - K SANTANU SEKHAR SENAPATI</h4>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>ROLL No. - 118EE0577</h4>", unsafe_allow_html=True)
-
-# st.subheader("NAME-KANCHADA SANTANU SEKHAR SENAPATI")
-# st.subheader("ROLL NO-118EE0577")
 
 st.write('\n')
 st.write('\n')
@@ -37,7 +33,8 @@ k = st.number_input('k value :', min_value=1, value=1)
 if st.checkbox('Feed Input Matrix'):
     st.text('* While entering the values press tab to go to the next input field and press enter after giving the inputs')
     st.text('* If you want to change the dimension of the input matrix then uncheck the checkbox before changing the input dimension')
-
+    st.text('* The page may take some time to load the grid for providing input to the matrix, kindly wait')
+    
     input_dataframe = pd.DataFrame(
         '',
         index=[i for i in range(n)],
